@@ -12,8 +12,13 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+// routes 
+import userRouter from "../routes/user.routes.js" 
+//route use because we are importing them
+app.use("/api/v1/users",userRouter)
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 export {app}
