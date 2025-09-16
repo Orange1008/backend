@@ -2,7 +2,14 @@
 
 import dotenv from "dotenv";
 
-dotenv.config();
+import path from "path";
+
+// Load .env from project root
+dotenv.config({ path: path.resolve(process.cwd(), ".env") });
+
+console.log("ENV TEST:", process.env.CLOUDINARY_API_KEY);
+
+
 
 import connectDB from "../db/index.js";
 import { app } from "./app.js";
