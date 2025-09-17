@@ -7,7 +7,7 @@ import path from "path";
 // Load .env from project root
 dotenv.config({ path: path.resolve(process.cwd(), ".env") });
 
-console.log("ENV TEST:", process.env.CLOUDINARY_API_KEY);
+//console.log("ENV TEST:", process.env.CLOUDINARY_API_KEY);
 
 
 
